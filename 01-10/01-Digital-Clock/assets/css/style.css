@@ -1,0 +1,98 @@
+/* css reset */
+html {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* general styles */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  background-color: #3a59d1;
+  color: #efeaea;
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  width: 100%;
+  min-height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 500px;
+  width: 70%;
+  height: 100%;
+  position: relative;
+}
+
+#clock {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0;
+  border-radius: 10px;
+  border: 5px solid #efeaea;
+  z-index: 1;
+}
+
+#clock::before {
+  content: '';
+  width: 135px;
+  height: 135px;
+  border-radius: 10px;
+  position: absolute;
+  background-color: #3d90d7;
+  z-index: -10;
+  top: -85px;
+  left: -85px;
+}
+
+#clock::after {
+  content: '';
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #7ac6d2;
+  z-index: -10;
+  top: 70px;
+  right: -120px;
+}
+
+#clock > span {
+  margin: 0 0.25em;
+  position: relative;
+}
+
+#clock > span::before {
+  width: 100%;
+  height: 20px;
+  position: absolute;
+  bottom: -30px;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+#clock > span#hours::before {
+  content: 'HOURS';
+}
+
+#clock > span#minutes::before {
+  content: 'MINUTES';
+}
+
+#clock > span#seconds::before {
+  content: 'SECONDS';
+}
