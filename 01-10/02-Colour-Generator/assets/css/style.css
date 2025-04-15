@@ -55,11 +55,19 @@ button:focus {
 }
 
 #colour-code {
-  margin: 2rem 0;
+  margin: 2em 0;
   font-weight: bold;
   background-color: rgb(112, 112, 112);
   display: inline-block;
   width: 100%;
-  padding: 0.25em;
+  padding: 1em;
   text-align: center;
+}
+
+.alert {
+  margin-bottom: 0.5em;
+  padding: 1em;
+  background-color: black;
+  color: #ece8e8;
+  opacity: 0.3;
 }
