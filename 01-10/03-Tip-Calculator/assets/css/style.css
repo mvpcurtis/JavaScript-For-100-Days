@@ -1,0 +1,83 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-colour: #fffffe;
+  --font-colour: #2b2c34;
+  --purple: #6246ea;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: var(--bg-colour);
+  color: var(--font-colour);
+  text-rendering: optimizeLegibility;
+}
+
+.container {
+  width: 850px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  width: 100%;
+  border: 4px solid var(--font-colour);
+  border-radius: 7px;
+  padding: 3rem 2rem;
+}
+
+.app > h1,
+.app > p {
+  text-align: center;
+}
+
+.app > p {
+  margin-bottom: 3rem;
+}
+
+.bill-amount,
+.tip-amount {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+button {
+  display: inline-block;
+  width: 100%;
+  background-color: var(--purple);
+  color: var(--bg-colour);
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid var(--font-colour);
+  margin-top: 0.3rem;
+}
