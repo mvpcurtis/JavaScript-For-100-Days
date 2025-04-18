@@ -1,16 +1,46 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
 *,
 *:before,
 *:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 :root {
   --purple: #6246ea;
   --white: #fffffe;
   --grey: #2b2c34;
+  --green: #58e45d;
   --red: #e45858;
+  --blue: #588be4;
 }
 
 body {
@@ -39,35 +69,33 @@ main {
   width: 100%;
   background-color: var(--white);
   color: var(--grey);
-  padding: 2em;
+  padding: 5em;
   border-radius: 7px;
 }
 
-h1 {
+#number {
+  display: block;
   text-align: center;
-  margin-bottom: 1em;
-}
-
-input[type='text'],
-button {
-  display: inline-block;
-  width: 100%;
-  border: none;
-  border-radius: 4px;
-  padding: 0.5em;
-}
-
-input[type='text'] {
-  border: 1px solid var(--grey);
+  font-size: 4rem;
   margin-bottom: 0.5em;
 }
 
+.buttons {
+  display: flex;
+  gap: 0.2em;
+}
+
 button {
-  cursor: pointer;
-  font-weight: bold;
-  background-color: var(--red);
   color: var(--white);
-  transition: all 0.1 ease-in-out;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  display: inline-block;
+  flex-grow: 1;
+  padding: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.1s ease-in-out;
 }
 
 button:hover,
@@ -75,19 +103,12 @@ button:focus {
   opacity: 0.8;
 }
 
-#todo-list {
-  margin-top: 2em;
+#increment {
+  background-color: var(--green);
 }
-
-#todo-list > ul {
-  list-style-type: none;
+#decrement {
+  background-color: var(--red);
 }
-
-#todo-list > ul > li {
-  background-color: #d1d1e9;
-  padding: 1em;
-  border-radius: 4px;
-  margin-bottom: 0.5em;
-  position: relative;
-  cursor: pointer;
+#reset {
+  background-color: var(--blue);
 }
