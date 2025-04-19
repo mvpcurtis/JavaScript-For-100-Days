@@ -10,4 +10,4 @@ While this was an 'easy' project, it gave me hands on experience with the setInt
 
 ## Extra info
 
-While the overall functionality of the project will remain the same, the UI down the line may be changed/modified to keep a theme that I may potentially make in the future.
+While the overall functionality of the project will remain the same, the UI down the line may be changed/modified to keep with a theme that I may potentially create in the future.
