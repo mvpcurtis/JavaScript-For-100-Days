@@ -1,33 +1,48 @@
-const incrementBtn = document.querySelector('#increment');
-const decrementBtn = document.querySelector('#decrement');
-const resetBtn = document.querySelector('#reset');
-const numberEl = document.querySelector('#number');
+console.log('Conntected.');
 
-let number = 0;
-number = parseInt(localStorage.getItem('value'));
+const celsiusField = document.querySelector('#cel');
+const celsiusBtn = document.querySelector('#celsius button');
+const fahrenheitField = document.querySelector('#fah');
+const fahrenheitBtn = document.querySelector('#fahrenheit button');
 
-const updateEl = () => {
-  localStorage.setItem('value', number);
-  numberEl.textContent = parseInt(localStorage.getItem('value'));
+const presentErrorMsg = () => {
+  const spanEl = document.createElement('span');
+  spanEl.textContent = 'Please enter a valid number!';
+  spanEl.id = 'error';
+  document.querySelector('.app').appendChild(spanEl);
+  setTimeout(function () {
+    spanEl.remove();
+  }, 3000);
 };
 
-const increment = () => {
-  number += 1;
-  updateEl();
+const floorToSecondDecimal = (number) => {
+  return Math.floor(number * 100) / 100;
 };
 
-const decrement = () => {
-  number -= 1;
-  updateEl();
+const conCelToFah = (celsius) => {
+  let sum = (celsius * 9) / 5 + 32;
+  fahrenheitField.value = floorToSecondDecimal(sum);
 };
 
-const reset = () => {
-  number = 0;
-  updateEl();
+const conFahToCel = (fahrenheit) => {
+  let sum = ((fahrenheit - 32) * 5) / 9;
+  celsiusField.value = floorToSecondDecimal(sum);
 };
 
-updateEl();
+celsiusBtn.addEventListener('click', function () {
+  const celsius = parseInt(celsiusField.value);
+  if (isNaN(celsius)) {
+    presentErrorMsg();
+  } else {
+    conCelToFah(celsius);
+  }
+});
 
-incrementBtn.addEventListener('click', increment);
-decrementBtn.addEventListener('click', decrement);
-resetBtn.addEventListener('click', reset);
+fahrenheitBtn.addEventListener('click', function () {
+  const fahrenheit = parseInt(fahrenheitField.value);
+  if (isNaN(fahrenheit)) {
+    presentErrorMsg();
+  } else {
+    conFahToCel(fahrenheit);
+  }
+});

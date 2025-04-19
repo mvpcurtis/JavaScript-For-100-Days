@@ -49,6 +49,7 @@ body {
   font-weight: normal;
   background-color: var(--purple);
   color: var(--white);
+  line-height: 1.6;
   text-rendering: optimizeLegibility;
 }
 
@@ -60,6 +61,7 @@ body {
 
 .app {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -71,10 +73,19 @@ main {
   color: var(--grey);
   padding: 5em;
   border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1em;
+}
+
+.wrapper {
   display: flex;
   flex-direction: row;
   gap: 1em;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 section {
@@ -94,6 +105,8 @@ input[type='text'] {
   width: 100%;
   padding: 0.5em;
   margin: 0.5em 0 1.5em 0;
+  border-radius: 5px;
+  border: 1px solid var(--grey);
 }
 
 .buttons {
@@ -102,7 +115,6 @@ input[type='text'] {
 }
 
 button {
-  background-color: var(--green);
   color: var(--white);
   font-weight: bold;
   border: none;
@@ -119,4 +131,23 @@ button {
 button:hover,
 button:focus {
   opacity: 0.8;
+}
+
+#celsius button {
+  background-color: var(--red);
+}
+
+#fahrenheit button {
+  background-color: var(--blue);
+}
+
+#error {
+  margin-top: 1em;
+  background-color: var(--red);
+  color: var(--white);
+  font-weight: normal;
+  font-size: 0.75rem;
+  padding: 0.75em 2em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 3px;
 }
