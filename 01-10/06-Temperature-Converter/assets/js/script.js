@@ -21,12 +21,12 @@ const floorToSecondDecimal = (number) => {
 
 const conCelToFah = (celsius) => {
   let sum = (celsius * 9) / 5 + 32;
-  fahrenheitField.value = floorToSecondDecimal(sum);
+  fahrenheitField.value = `${floorToSecondDecimal(sum)}°F`;
 };
 
 const conFahToCel = (fahrenheit) => {
   let sum = ((fahrenheit - 32) * 5) / 9;
-  celsiusField.value = floorToSecondDecimal(sum);
+  celsiusField.value = `${floorToSecondDecimal(sum)}°C`;
 };
 
 celsiusBtn.addEventListener('click', function () {
