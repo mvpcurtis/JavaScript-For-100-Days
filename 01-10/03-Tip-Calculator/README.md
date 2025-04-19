@@ -1,4 +1,4 @@
-# Colour generator
+# Tip calculator
 
 ## Description
 
