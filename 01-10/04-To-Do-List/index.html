@@ -5,24 +5,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- title -->
-    <title>Document</title>
+    <title>JavaScript For 100 Days</title>
     <!-- css -->
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <!-- container -->
     <div class="container">
       <div class="app">
+        <!-- app -->
         <main>
-          <div id="add-todo">
-            <h1>To-Do List</h1>
-            <input type="text" name="add" id="add" />
-            <button>Add</button>
+          <h1>To Do List</h1>
+          <p id="title">JavaScript For 100 Days</p>
+          <div class="input">
+            <input type="text" name="input-field" id="input-field" />
+            <button id="add">Add</button>
           </div>
-          <div id="todo-list">
-            <ul>
-              <li>This is an example.</li>
-            </ul>
-          </div>
+          <ul class="scroll">
+            <li>Item</li>
+          </ul>
+          <section>
+            <hr class="counter" />
+            <div class="counter-container">
+              <p><span>0</span> items total</p>
+              <button id="delete">Delete All</button>
+            </div>
+          </section>
         </main>
       </div>
     </div>
