@@ -1,10 +1,10 @@
-# Quote generator
+# Modal window
 
 ## Description
 
-This project has been more of a challenge than I initially thought. A quote generator using arrays of objects to store both a quote and the source of that quote.
+This is a simple project to regarding the JavaScript aspect but DOM toggling is an important concept to drill down.
 
-The difficult part of this project was implementing a method to reduce the chance of the random number generator returning the same number twice (which results in the same quote being displayed twice in a row). In order to achive this, I have used a do-while loop which checks if the number for a new quote is equal to the previous number generated.
+A simple popup modal window is displayed when the button on the page is clicked along side of a faded out overlay that sits behind the modal to display precedence.
 
 ## Extra info
 
