@@ -112,7 +112,11 @@ button {
   width: 20px;
   height: 20px;
   align-content: center;
+  border: none;
+  outline: none;
   border-radius: 50%;
+  color: white;
+  cursor: pointer;
 }
 
 button:hover,
