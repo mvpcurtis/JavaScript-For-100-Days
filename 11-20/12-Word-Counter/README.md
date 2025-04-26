@@ -1,4 +1,4 @@
-# Basic Calculator
+# Word counter
 
 ## Description
 
